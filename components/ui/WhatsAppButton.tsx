@@ -9,7 +9,7 @@ const WhatsAppIcon = () => (
 );
 
 const WhatsAppButton: React.FC = () => {
-    const phoneNumber = "1234567890"; // Replace with actual number
+    const phoneNumber = "2347085701383"; 
     const message = "Hello Optimistics Naturals, I have a question!";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
