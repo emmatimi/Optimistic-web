@@ -132,7 +132,7 @@ function App() {
       <CartProvider>
         <WishlistProvider>
           <HashRouter>
-            <div className="bg-brand-light font-sans text-brand-dark min-h-dynamic-screen flex flex-col">
+            <div className="bg-brand-light font-sans text-brand-dark min-h-dynamic-screen flex flex-col w-full overflow-x-hidden">
               <Header />
               <main className="flex-grow">
                 <AnimatedRoutes />
