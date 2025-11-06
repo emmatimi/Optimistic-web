@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { HashRouter, Route, Routes, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion, type Transition } from 'framer-motion';
 import { CartProvider } from './contexts/CartContext';
@@ -113,26 +113,12 @@ const PageWrapper: React.FC<{children: React.ReactNode}> = ({ children }) => (
 );
 
 function App() {
-  useEffect(() => {
-    const setAppHeight = () => {
-      const doc = document.documentElement;
-      doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-    };
-    
-    window.addEventListener('resize', setAppHeight);
-    setAppHeight(); // Set initial height
-    
-    return () => {
-      window.removeEventListener('resize', setAppHeight);
-    };
-  }, []);
-  
   return (
     <AuthProvider>
       <CartProvider>
         <WishlistProvider>
           <HashRouter>
-            <div className="bg-brand-light font-sans text-brand-dark min-h-dynamic-screen flex flex-col w-full overflow-x-hidden">
+            <div className="bg-brand-light font-sans text-brand-dark min-h-screen flex flex-col">
               <Header />
               <main className="flex-grow">
                 <AnimatedRoutes />
